@@ -1,7 +1,55 @@
 * About
   This is an enterprise grade ~HelloWorld~ application.
   It includes:
-  + [ ] markdown README.md
+  + [ ] multiformat README.md
   + [ ] python HelloWorld.py
-  + [ ] Git branches
-**
+  + [X] Git branches
+** README.md [0/1]
+   + [ ] Mention checklists somewhere.
+   It is terrible practice follow the logic of files in literate documents.
+   However for demonstration purposes we will start off with this and then fix 
+   it later. [fn::keep line lengths to some reasonable length, you also get 
+   all of org mode for free, like footnotes.]
+   
+   We start with the source command. This can be quickly started with <s-TAB.
+   + [ ] Explain about :things values.
+   #+BEGIN_EXAMPLE
+     ,#+BEGIN_SRC org :tangle README.org
+       ,* This the heading text.
+     ,#+END_SRC
+   #+END_EXAMPLE
+   
+   Actual file:
+   #+BEGIN_SRC org :tangle readme.org :export results
+     ,* This is the README file for this project
+     
+       Since this is an enterprise grade system you can view the README in any of 
+       the following formats:
+       + org
+       + md
+       + html
+       + pdf
+       + docx
+   #+END_SRC
+   
+   Next you need to tangle the source code using ~M-x org-babel-tangle~.
+   Since we are showing off the capabilities of org-mode it can execute code
+   within cells using ~C-c C-c~. The following do that on the following bash file
+   assuming you have ~pandoc~ installed.
+   
+   #+BEGIN_SRC bash :exports both :results verbatim
+     pandoc readme.org -o README.org
+     pandoc readme.org -o README.md
+     pandoc readme.org -o README.html
+     pandoc readme.org -o README.pdf
+     pandoc readme.org -o README.docx
+     ls -l README*
+   #+END_SRC
+
+   #+RESULTS:
+   : -rw-r--r-- 1 anton anton  9798 Jul 17 17:48 README.docx
+   : -rw-r--r-- 1 anton anton   278 Jul 17 17:48 README.html
+   : -rw-r--r-- 1 anton anton   223 Jul 17 17:48 README.md
+   : -rw-r--r-- 1 anton anton   252 Jul 17 17:48 README.org
+   : -rw-r--r-- 1 anton anton 52238 Jul 17 17:48 README.pdf
+
