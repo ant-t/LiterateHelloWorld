@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-07-17 Tue 17:58 -->
+<!-- 2018-07-17 Tue 18:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -233,17 +233,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2a1342f">1. About</a>
+<li><a href="#org521b49d">1. About</a>
 <ul>
-<li><a href="#orgb114679">1.1. README.md <code>[0/1]</code></a></li>
+<li><a href="#org9c90742">1.1. README.md <code>[0/1]</code></a></li>
+<li><a href="#orge74f393">1.2. HelloWorld.py <code>[0/2]</code></a></li>
+<li><a href="#org76613b0">1.3. DevOps</a></li>
+<li><a href="#orge889c09">1.4. Automation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a1342f" class="outline-2">
-<h2 id="org2a1342f"><span class="section-number-2">1</span> About</h2>
+<div id="outline-container-org521b49d" class="outline-2">
+<h2 id="org521b49d"><span class="section-number-2">1</span> About</h2>
 <div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Mention checklists for org and <code>[/]</code> notation.</li>
+</ul>
 <p>
 This is an enterprise grade <code>HelloWorld</code> application.
 It includes:
@@ -254,12 +260,9 @@ It includes:
 <li class="on"><code>[X]</code> Git branches</li>
 </ul>
 </div>
-<div id="outline-container-orgb114679" class="outline-3">
-<h3 id="orgb114679"><span class="section-number-3">1.1</span> README.md <code>[0/1]</code></h3>
+<div id="outline-container-org9c90742" class="outline-3">
+<h3 id="org9c90742"><span class="section-number-3">1.1</span> README.md <code>[0/1]</code></h3>
 <div class="outline-text-3" id="text-1-1">
-<ul class="org-ul">
-<li class="off"><code>[&#xa0;]</code> Mention checklists somewhere.</li>
-</ul>
 <p>
 It is terrible practice follow the logic of files in literate documents.
 However for demonstration purposes we will start off with this and then fix 
@@ -300,7 +303,9 @@ Since we are showing off the capabilities of org-mode it can execute code
 within cells using <code>C-c C-c</code>. The following do that on the following bash file
 assuming you have <code>pandoc</code> installed.
 </p>
-
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Add a listing of the full source (maybe?)</li>
+</ul>
 <div class="org-src-container">
 <pre class="src src-bash">pandoc readme.org -o README.org
 pandoc readme.org -o README.md
@@ -310,6 +315,66 @@ pandoc readme.org -o README.docx
 ls -l README*
 </pre>
 </div>
+
+<pre class="example">
+-rw-r--r-- 1 anton anton  9798 Jul 17 18:20 README.docx
+-rw-r--r-- 1 anton anton   278 Jul 17 18:20 README.html
+-rw-r--r-- 1 anton anton   223 Jul 17 18:20 README.md
+-rw-r--r-- 1 anton anton   252 Jul 17 18:20 README.org
+-rw-r--r-- 1 anton anton 52238 Jul 17 18:20 README.pdf
+
+</pre>
+</div>
+</div>
+<div id="outline-container-orge74f393" class="outline-3">
+<h3 id="orge74f393"><span class="section-number-3">1.2</span> HelloWorld.py <code>[0/2]</code></h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Write main.py</li>
+</ul>
+
+<p>
+Python is easy:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #00ffff; font-weight: bold;">if</span> <span style="color: #0000ff; font-weight: bold;">__name__</span> == <span style="color: #00ff00;">"__main__"</span>:
+    <span style="color: #00ffff; font-weight: bold;">print</span>(<span style="color: #00ff00;">"Hello World"</span>)
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org76613b0" class="outline-3">
+<h3 id="org76613b0"><span class="section-number-3">1.3</span> DevOps</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Create a venv</li>
+<li class="off"><code>[&#xa0;]</code> load venv</li>
+<li class="off"><code>[&#xa0;]</code> run the code</li>
+</ul>
+
+<p>
+Running the code 
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">python HelloWorld.py
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge889c09" class="outline-3">
+<h3 id="orge889c09"><span class="section-number-3">1.4</span> Automation</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Tangle all files</li>
+<li class="off"><code>[&#xa0;]</code> Write make file to launch
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Full tangle</li>
+<li class="off"><code>[&#xa0;]</code> Full weave</li>
+<li class="off"><code>[&#xa0;]</code> launch app in venv</li>
+</ul></li>
+</ul>
 </div>
 </div>
 </div>
@@ -325,7 +390,7 @@ all of org mode for free, like footnotes.</div></div>
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: anton</p>
-<p class="date">Created: 2018-07-17 Tue 17:58</p>
+<p class="date">Created: 2018-07-17 Tue 18:20</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

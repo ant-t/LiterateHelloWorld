@@ -1,11 +1,11 @@
 * About
+  + [ ] Mention checklists for org and [/] notation.
   This is an enterprise grade ~HelloWorld~ application.
   It includes:
   + [ ] multiformat README.md
   + [ ] python HelloWorld.py
   + [X] Git branches
 ** README.md [0/1]
-   + [ ] Mention checklists somewhere.
    It is terrible practice follow the logic of files in literate documents.
    However for demonstration purposes we will start off with this and then fix 
    it later. [fn::keep line lengths to some reasonable length, you also get 
@@ -36,7 +36,7 @@
    Since we are showing off the capabilities of org-mode it can execute code
    within cells using ~C-c C-c~. The following do that on the following bash file
    assuming you have ~pandoc~ installed.
-   
+   + [ ] Add a listing of the full source (maybe?)
    #+BEGIN_SRC bash :exports both :results verbatim
      pandoc readme.org -o README.org
      pandoc readme.org -o README.md
@@ -47,9 +47,42 @@
    #+END_SRC
 
    #+RESULTS:
-   : -rw-r--r-- 1 anton anton  9798 Jul 17 17:48 README.docx
-   : -rw-r--r-- 1 anton anton   278 Jul 17 17:48 README.html
-   : -rw-r--r-- 1 anton anton   223 Jul 17 17:48 README.md
-   : -rw-r--r-- 1 anton anton   252 Jul 17 17:48 README.org
-   : -rw-r--r-- 1 anton anton 52238 Jul 17 17:48 README.pdf
+   : -rw-r--r-- 1 anton anton  9799 Jul 17 17:59 README.docx
+   : -rw-r--r-- 1 anton anton   278 Jul 17 17:59 README.html
+   : -rw-r--r-- 1 anton anton   223 Jul 17 17:59 README.md
+   : -rw-r--r-- 1 anton anton   252 Jul 17 17:59 README.org
+   : -rw-r--r-- 1 anton anton 52238 Jul 17 17:59 README.pdf
+** HelloWorld.py [0/2]
+   + [ ] Write main.py
+    
+   Python is easy:
+   #+BEGIN_SRC python :tangle HelloWorld.py
+     if __name__ == "__main__":
+         print("Hello World")
 
+   #+END_SRC
+** DevOps
+   + [ ] Create a venv
+   + [ ] load venv
+   + [ ] run the code
+     
+   Running the code 
+   #+BEGIN_SRC bash
+   python HelloWorld.py
+   #+END_SRC
+
+   #+RESULTS:
+   : Hello World
+
+** Automation
+   + [ ] Tangle all files
+   + [ ] Write make file to launch
+     + [ ] Full tangle
+     + [ ] Full weave
+     + [ ] launch app in venv
+
+   
+     
+
+     
+     
