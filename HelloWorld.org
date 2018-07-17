@@ -1,0 +1,7 @@
+* About
+  This is an enterprise grade ~HelloWorld~ application.
+  It includes:
+  + [ ] markdown README.md
+  + [ ] python HelloWorld.py
+  + [ ] Git branches
+**
